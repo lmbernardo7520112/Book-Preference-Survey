@@ -6,6 +6,20 @@ body {
   background-size: cover;
 }
 
+.smaller-icon {
+  width: 50%; /* Definindo o tamanho do ícone como metade do tamanho original */
+}
+
+/* styles.css */
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between; /* Add space between the navbar items */
+  width: 100%; /* Ensure the navbar items span the entire width */
+}
+
+
+
 .navbar,
 .footer {
   border-radius: 10px;
@@ -58,6 +72,8 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+
 
 .btn {
   background-color: #007bff;
