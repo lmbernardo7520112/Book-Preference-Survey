@@ -39,7 +39,7 @@ const Footer = () => {
 
 const BookPreferenceSurveyPage = () => {
     return (
-        <div className="d-flex flex-column min-vh-100">
+        <div className="d-flex flex-column min-vh-100 book-survey-bg">
             <Navbar />
             <div className="container flex-grow-1">
                 <div className="card">
