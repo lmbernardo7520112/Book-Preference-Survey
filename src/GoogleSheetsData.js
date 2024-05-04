@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; // Import axios for making HTTP requests
+import './App.css'; // Import CSS file for styling
 
 const GoogleSheetsData = () => {
   const [data, setData] = useState([]);
@@ -33,19 +34,24 @@ const GoogleSheetsData = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Google Sheets Data</h2>
-      <ul>
+    <div className="recommendations-container">
+      <h2 className="section-title">Book Recommendations</h2>
+      <div className="card-container">
         {data.map((row, index) => (
-          <li key={index}>
-            Carimbo de data/hora: {row['Carimbo de data/hora']},
-            Name: {row['What is your name?']},
-            Age: {row['How old are you?']},
-            Genre: {row['Which book genre do you prefer?']},
-            Recommendations: {row['Recommendations']}
-          </li>
+          <div className="card" key={index}>
+            <h3 className="card-title">{row['Recommendations']}</h3>
+            <p className="card-text">
+              <span className="highlight">Author:</span> {row['Author']}
+            </p>
+            <p className="card-text">
+              <span className="highlight">Genre:</span> {row['Genre']}
+            </p>
+            <p className="card-text">
+              <span className="highlight">Rating:</span> {row['Rating']}
+            </p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
